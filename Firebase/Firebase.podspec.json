@@ -1,160 +1,141 @@
 {
   "name": "Firebase",
-  "version": "3.3.0",
+  "version": "3.7.1",
   "summary": "Firebase for iOS",
   "description": "Simplify your iOS development, grow your user base, and monetize more effectively with Firebase.",
   "homepage": "https://firebase.google.com",
   "license": {
-    "text": "Copyright 2016 Google Inc.",
-    "type": "Copyright"
+    "type": "Copyright",
+    "text": "Copyright 2016 Google"
   },
-  "authors": "Google Inc.",
-  "source": {
-    "http": "https://www.gstatic.com/cpdc/4a4de204d5c1658d-Firebase-3.3.0.tar.gz"
-  },
-  "requires_arc": true,
+  "authors": "Google, Inc.",
   "platforms": {
     "ios": "7.0"
   },
+  "source": {
+    "http": "https://dl.google.com/dl/cpdc/4654b51b1b93045b/Firebase-3.7.1.tar.gz"
+  },
+  "preserve_paths": [
+    ".cocoapods.yml",
+    "CHANGELOG.md",
+    "NOTICES",
+    "README.md"
+  ],
   "default_subspecs": [
     "Core"
   ],
   "subspecs": [
     {
       "name": "Core",
+      "source_files": [
+        "Core/Sources/Firebase.h"
+      ],
+      "preserve_paths": [
+        "Core/Sources/module.modulemap"
+      ],
       "dependencies": {
-        "Firebase/Analytics": [
-          "3.3.0"
-        ]
+        "FirebaseAnalytics": "3.4.4",
+        "FirebaseCore": "3.4.3"
+      },
+      "user_target_xcconfig": {
+        "HEADER_SEARCH_PATHS": "$(inherited) ${PODS_ROOT}/Firebase/Core/Sources"
       }
     },
     {
       "name": "AdMob",
       "dependencies": {
-        "Google-Mobile-Ads-SDK": [
-          "7.8.1"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "Google-Mobile-Ads-SDK": "7.12.1",
+        "Firebase/Core": [
+
         ]
       }
     },
     {
       "name": "Analytics",
       "dependencies": {
-        "FirebaseAnalytics": [
-          "3.2.1"
+        "Firebase/Core": [
+
         ]
-      },
-      "source_files": [
-        "Headers/Firebase.h"
-      ],
-      "public_header_files": [
-        "Headers/Firebase.h"
-      ],
-      "preserve_paths": [
-        "Headers/module.modulemap"
-      ],
-      "user_target_xcconfig": {
-        "HEADER_SEARCH_PATHS": "$(inherited) ${PODS_ROOT}/Firebase/Headers"
       }
     },
     {
       "name": "AppIndexing",
       "dependencies": {
-        "FirebaseAppIndexing": [
-          "1.0.3"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "FirebaseAppIndexing": "1.2.0",
+        "Firebase/Core": [
+
         ]
       }
     },
     {
       "name": "Auth",
       "dependencies": {
-        "FirebaseAuth": [
-          "3.0.3"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "FirebaseAuth": "3.0.5",
+        "Firebase/Core": [
+
         ]
       }
     },
     {
       "name": "Crash",
       "dependencies": {
-        "FirebaseCrash": [
-          "1.0.6"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "FirebaseCrash": "1.0.7",
+        "Firebase/Core": [
+
         ]
       }
     },
     {
       "name": "Database",
       "dependencies": {
-        "FirebaseDatabase": [
-          "3.0.2"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "FirebaseDatabase": "3.0.3",
+        "Firebase/Core": [
+
         ]
       }
     },
     {
       "name": "DynamicLinks",
       "dependencies": {
-        "FirebaseDynamicLinks": [
-          "1.1.0"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "FirebaseDynamicLinks": "1.3.0",
+        "Firebase/Core": [
+
         ]
       }
     },
     {
       "name": "Invites",
       "dependencies": {
-        "FirebaseInvites": [
-          "1.1.0"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "FirebaseInvites": "1.2.1",
+        "Firebase/Core": [
+
         ]
       }
     },
     {
       "name": "Messaging",
       "dependencies": {
-        "FirebaseMessaging": [
-          "1.1.0"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "FirebaseMessaging": "1.2.0",
+        "Firebase/Core": [
+
         ]
       }
     },
     {
       "name": "RemoteConfig",
       "dependencies": {
-        "FirebaseRemoteConfig": [
-          "1.1.1"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "FirebaseRemoteConfig": "1.3.0",
+        "Firebase/Core": [
+
         ]
       }
     },
     {
       "name": "Storage",
       "dependencies": {
-        "FirebaseStorage": [
-          "1.0.2"
-        ],
-        "Firebase/Analytics": [
-          "3.3.0"
+        "FirebaseStorage": "1.0.3",
+        "Firebase/Core": [
+
         ]
       }
     }

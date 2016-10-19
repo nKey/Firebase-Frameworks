@@ -1,31 +1,27 @@
 {
   "name": "FirebaseInstanceID",
-  "version": "1.0.7",
-  "summary": "Firebase InstanceID for iOS",
-  "description": "Instance ID provides a unique ID per instance of your iOS apps, with support for Android as well. In addition to providing unique IDs for authentication, Instance ID can generate security tokens for use with other services.",
-  "homepage": "https://firebase.google.com",
+  "version": "1.0.8",
+  "summary": "Firebase InstanceID for iOS.",
+  "description": "Instance ID provides a unique ID per instance of your iOS apps. In addition to providing unique IDs for authentication, Instance ID can generate security tokens for use with other services.",
+  "homepage": "https://developer.android.com/google/gcm/index.html",
   "license": {
-    "text": "Copyright 2016 Google Inc.",
-    "type": "Copyright"
+    "type": "Copyright",
+    "text": "Copyright 2016 Google"
   },
-  "authors": "Google Inc.",
+  "authors": "Google, Inc.",
   "platforms": {
     "ios": "7.0"
   },
+  "source": {
+    "http": "https://www.gstatic.com/cpdc/18da95d517c54d0f/FirebaseInstanceID-1.0.8.tar.gz"
+  },
   "vendored_frameworks": [
-    "Frameworks/FirebaseInstanceID.framework"
-  ],
-  "public_header_files": [
-    "Headers/Public/*.h"
+    "Frameworks/frameworks/FirebaseInstanceID.framework"
   ],
   "source_files": [
-    "Headers/Public/*.h"
+    "Sources/FIRInstanceID.h"
   ],
-  "preserve_paths": [
-    "CHANGELOG.md",
-    "README.md"
-  ],
-  "source": {
-    "http": "https://www.gstatic.com/cpdc/46b87f251519815b-FirebaseInstanceID-1.0.7.tar.gz"
-  }
+  "frameworks": [
+    "AddressBook"
+  ]
 }
